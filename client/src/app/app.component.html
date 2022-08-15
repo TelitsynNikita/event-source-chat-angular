@@ -1,0 +1,12 @@
+<main>
+  <form>
+    <input type="text" placeholder="message">
+    <button>Send</button>
+  </form>
+
+  <div>
+    <ul>
+      <li *ngFor="let message of messages">{{message.message}}</li>
+    </ul>
+  </div>
+</main>
