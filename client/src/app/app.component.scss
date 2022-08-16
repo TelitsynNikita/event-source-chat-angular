@@ -1,0 +1,33 @@
+main {
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+
+  form {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 50px;
+    border-radius: 10px;
+    border: 1px solid #4070b6;
+  }
+
+  div {
+    ul {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .text {
+        width: 100%;
+        font-size: 20px;
+        color: #fff;
+      }
+    }
+  }
+}

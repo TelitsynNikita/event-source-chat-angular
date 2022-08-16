@@ -2,7 +2,7 @@ require('dotenv').config()
 const express = require('express')
 const app = express()
 const events = require('events')
-const PORT = process.env.PORT || 6000
+const PORT = process.env.PORT || 6200
 const emitter = new events.EventEmitter()
 
 app.use(require('cors')())
@@ -15,7 +15,7 @@ app.get('/get-messages', (req, res) => {
         'Cache-Control': 'no-cache'
     })
     emitter.on('newMessage', (message) => {
-        res.write(message)
+        res.write(`data: ${JSON.stringify(message)} \n\n`)
     })
 })
 
@@ -26,5 +26,5 @@ app.post('/new-messages', (req, res) => {
 })
 
 app.listen(PORT, () => {
-    console.log('Server started')
+    console.log(`Server started on port ${PORT}`)
 })

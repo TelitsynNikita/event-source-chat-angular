@@ -1,12 +1,12 @@
 <main>
-  <form>
-    <input type="text" placeholder="message">
+  <form [formGroup]="myForm" (submit)="onSendMessage(myForm)">
+    <input type="text" placeholder="message" formControlName="message">
     <button>Send</button>
   </form>
 
   <div>
     <ul>
-      <li *ngFor="let message of messages">{{message.message}}</li>
+      <li *ngFor="let message of messages" class="text">{{message.message}}</li>
     </ul>
   </div>
 </main>
